@@ -1,5 +1,5 @@
 Flow report for pwla_sigmoid
-Fri Feb 26 16:05:16 2021
+Mon Mar  1 21:23:23 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,20 +41,20 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Flow Failed - Fri Feb 26 16:05:16 2021      ;
+; Flow Status                        ; Successful - Mon Mar  1 21:23:23 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; pwla_sigmoid                                ;
-; Top-level Entity Name              ; pwla_sigmoid_tb                             ;
+; Top-level Entity Name              ; pwla_sigmoid                                ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 32                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -63,31 +63,30 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/26/2021 16:05:09 ;
+; Start date & time ; 03/01/2021 21:23:15 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; pwla_sigmoid        ;
 +-------------------+---------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                   ;
-+-------------------------------------+----------------------------------------+---------------+-----------------+-----------------------------------+
-; Assignment Name                     ; Value                                  ; Default Value ; Entity Name     ; Section Id                        ;
-+-------------------------------------+----------------------------------------+---------------+-----------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 176507751568776.161436630912331        ; --            ; --              ; --                                ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --              ; eda_board_design_timing           ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --              ; eda_board_design_boundary_scan    ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --              ; eda_board_design_signal_integrity ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --              ; eda_board_design_symbol           ;
-; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                      ; --            ; --              ; eda_simulation                    ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)        ; <None>        ; --              ; --                                ;
-; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --              ; eda_simulation                    ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; pwla_sigmoid_tb ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; pwla_sigmoid_tb ; Top                               ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; pwla_sigmoid_tb ; Top                               ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --              ; --                                ;
-; TOP_LEVEL_ENTITY                    ; pwla_sigmoid_tb                        ; pwla_sigmoid  ; --              ; --                                ;
-+-------------------------------------+----------------------------------------+---------------+-----------------+-----------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                               ;
++-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
++-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
+; COMPILER_SIGNATURE_ID               ; 176507751568776.161464459528832        ; --            ; --          ; --                                ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_symbol           ;
+; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                      ; --            ; --          ; eda_simulation                    ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)        ; <None>        ; --          ; --                                ;
+; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation                    ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --                                ;
++-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -95,18 +94,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 346 MB              ; 00:00:18                           ;
-; Total                ; 00:00:07     ; --                      ; --                  ; 00:00:18                           ;
+; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 564 MB              ; 00:00:20                           ;
+; Total                ; 00:00:07     ; --                      ; --                  ; 00:00:20                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------+
 ; Flow OS Summary                                                                           ;
-+----------------------+-----------------------+--------------+------------+----------------+
-; Module Name          ; Machine Hostname      ; OS Name      ; OS Version ; Processor type ;
-+----------------------+-----------------------+--------------+------------+----------------+
-; Analysis & Synthesis ; daniel-Nitro-AN515-51 ; Ubuntu 20.10 ; 20         ; x86_64         ;
-+----------------------+-----------------------+--------------+------------+----------------+
++----------------------+-----------------------+-------------+-------------+----------------+
+; Module Name          ; Machine Hostname      ; OS Name     ; OS Version  ; Processor type ;
++----------------------+-----------------------+-------------+-------------+----------------+
+; Analysis & Synthesis ; localhost.localdomain ; Fedora Core ; Fedora Core ; x86_64         ;
++----------------------+-----------------------+-------------+-------------+----------------+
 
 
 ------------

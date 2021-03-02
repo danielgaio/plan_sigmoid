@@ -1,5 +1,5 @@
 Analysis & Synthesis report for pwla_sigmoid
-Fri Feb 26 16:05:16 2021
+Mon Mar  1 21:23:23 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -10,9 +10,13 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Port Connectivity Checks: "pwla_sigmoid:pwla_sigmoid_DUT"
-  6. Elapsed Time Per Partition
-  7. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -39,20 +43,20 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Fri Feb 26 16:05:16 2021           ;
+; Analysis & Synthesis Status        ; Successful - Mon Mar  1 21:23:23 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; pwla_sigmoid                                ;
-; Top-level Entity Name              ; pwla_sigmoid_tb                             ;
+; Top-level Entity Name              ; pwla_sigmoid                                ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 32                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -61,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
-; Top-level entity name                                            ; pwla_sigmoid_tb    ; pwla_sigmoid       ;
+; Top-level entity name                                            ; pwla_sigmoid       ; pwla_sigmoid       ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -157,13 +161,84 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "pwla_sigmoid:pwla_sigmoid_DUT"                                                      ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; f_x  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                   ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                               ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------+---------+
+; pwla_sigmoid.sv                  ; yes             ; User SystemVerilog HDL File  ; /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 32    ;
+;                                             ;       ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; x[0]  ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 32    ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                       ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name  ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+--------------+
+; |pwla_sigmoid              ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 32   ; 0            ; |pwla_sigmoid       ; pwla_sigmoid ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 32                          ;
+; cycloneiii_lcell_comb ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
 
 
 +-------------------------------+
@@ -181,7 +256,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Feb 26 16:05:09 2021
+    Info: Processing started: Mon Mar  1 21:23:15 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pwla_sigmoid -c pwla_sigmoid
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -189,19 +264,57 @@ Info (12021): Found 1 design units, including 1 entities, in source file pwla_si
     Info (12023): Found entity 1: pwla_sigmoid_tb File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid_tb.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file pwla_sigmoid.sv
     Info (12023): Found entity 1: pwla_sigmoid File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 3
-Info (12127): Elaborating entity "pwla_sigmoid_tb" for the top level hierarchy
-Info (10648): Verilog HDL Display System Task info at pwla_sigmoid_tb.sv(22): f_x = 0.000000 File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid_tb.sv Line: 22
-Info (12128): Elaborating entity "pwla_sigmoid" for hierarchy "pwla_sigmoid:pwla_sigmoid_DUT" File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid_tb.sv Line: 16
-Warning (10036): Verilog HDL or VHDL warning at pwla_sigmoid.sv(5): object "x_int" assigned a value but never read File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 5
+Info (12127): Elaborating entity "pwla_sigmoid" for the top level hierarchy
 Warning (10230): Verilog HDL assignment warning at pwla_sigmoid.sv(8): truncated value with size 32 to match size of target (16) File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 8
 Info (10648): Verilog HDL Display System Task info at pwla_sigmoid.sv(9): 16'b......0000000000 File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 9
+Warning (10230): Verilog HDL assignment warning at pwla_sigmoid.sv(16): truncated value with size 32 to match size of target (16) File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 16
 Warning (10855): Verilog HDL warning at pwla_sigmoid.sv(7): initial value for variable x_int should be constant File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 7
+Warning (10855): Verilog HDL warning at pwla_sigmoid.sv(7): initial value for variable f_x should be constant File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 7
 Warning (10034): Output port "f_x" at pwla_sigmoid.sv(3) has no driver File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 3
-Error (12061): Can't synthesize current design -- Top partition does not contain any logic
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 5 warnings
-    Error: Peak virtual memory: 346 megabytes
-    Error: Processing ended: Fri Feb 26 16:05:16 2021
-    Error: Elapsed time: 00:00:07
-    Error: Total CPU time (on all processors): 00:00:18
+Warning (12158): Entity "pwla_sigmoid" contains only dangling pins
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "f_x[0]" is stuck at GND File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 3
+    Warning (13410): Pin "f_x[1]" is stuck at GND File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 3
+    Warning (13410): Pin "f_x[2]" is stuck at GND File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 3
+    Warning (13410): Pin "f_x[3]" is stuck at GND File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 3
+    Warning (13410): Pin "f_x[4]" is stuck at GND File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 3
+    Warning (13410): Pin "f_x[5]" is stuck at GND File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 3
+    Warning (13410): Pin "f_x[6]" is stuck at GND File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 3
+    Warning (13410): Pin "f_x[7]" is stuck at GND File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 3
+    Warning (13410): Pin "f_x[8]" is stuck at GND File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 3
+    Warning (13410): Pin "f_x[9]" is stuck at GND File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 3
+    Warning (13410): Pin "f_x[10]" is stuck at GND File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 3
+    Warning (13410): Pin "f_x[11]" is stuck at GND File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 3
+    Warning (13410): Pin "f_x[12]" is stuck at GND File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 3
+    Warning (13410): Pin "f_x[13]" is stuck at GND File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 3
+    Warning (13410): Pin "f_x[14]" is stuck at GND File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 3
+    Warning (13410): Pin "f_x[15]" is stuck at GND File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 3
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 16 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "x[0]" File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 3
+    Warning (15610): No output dependent on input pin "x[1]" File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 3
+    Warning (15610): No output dependent on input pin "x[2]" File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 3
+    Warning (15610): No output dependent on input pin "x[3]" File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 3
+    Warning (15610): No output dependent on input pin "x[4]" File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 3
+    Warning (15610): No output dependent on input pin "x[5]" File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 3
+    Warning (15610): No output dependent on input pin "x[6]" File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 3
+    Warning (15610): No output dependent on input pin "x[7]" File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 3
+    Warning (15610): No output dependent on input pin "x[8]" File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 3
+    Warning (15610): No output dependent on input pin "x[9]" File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 3
+    Warning (15610): No output dependent on input pin "x[10]" File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 3
+    Warning (15610): No output dependent on input pin "x[11]" File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 3
+    Warning (15610): No output dependent on input pin "x[12]" File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 3
+    Warning (15610): No output dependent on input pin "x[13]" File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 3
+    Warning (15610): No output dependent on input pin "x[14]" File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 3
+    Warning (15610): No output dependent on input pin "x[15]" File: /home/daniel/Documents/GitHub/pwla_sigmoid/pwla_sigmoid.sv Line: 3
+Info (21057): Implemented 32 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 16 input pins
+    Info (21059): Implemented 16 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 41 warnings
+    Info: Peak virtual memory: 575 megabytes
+    Info: Processing ended: Mon Mar  1 21:23:23 2021
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:20
 
 

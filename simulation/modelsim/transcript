@@ -1,10 +1,1 @@
-# Compile of pwla_sigmoid_tb.sv was successful.
-vsim work.pwla_sigmoid
-# vsim work.pwla_sigmoid 
-# Start time: 15:56:44 on Feb 26,2021
-# ** Error: (vsim-3170) Could not find 'pwla_sigmoid'.
-#         Searched libraries:
-#             /home/daniel/Documents/GitHub/pwla_sigmoid/simulation/modelsim/work
-# Error loading design
-# End time: 15:56:44 on Feb 26,2021, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 5
+# Load canceled

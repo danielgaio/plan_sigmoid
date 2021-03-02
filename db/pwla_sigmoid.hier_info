@@ -1,7 +1,4 @@
-|pwla_sigmoid_tb
-
-
-|pwla_sigmoid_tb|pwla_sigmoid:pwla_sigmoid_DUT
+|pwla_sigmoid
 x[0] => ~NO_FANOUT~
 x[1] => ~NO_FANOUT~
 x[2] => ~NO_FANOUT~
