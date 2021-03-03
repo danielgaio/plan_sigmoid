@@ -1,5 +1,0 @@
-`timescale 1ns / 1ps
-
-module pwla_sigmoid ();
-
-endmodule

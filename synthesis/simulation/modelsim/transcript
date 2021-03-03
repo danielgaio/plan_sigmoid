@@ -1,0 +1,10 @@
+vsim work.pwla_sigmoid_tb
+# vsim work.pwla_sigmoid_tb 
+# Start time: 14:42:13 on Mar 03,2021
+# Loading sv_std.std
+# Loading work.pwla_sigmoid_tb
+# Loading work.pwla_sigmoid
+add wave -position end  sim:/pwla_sigmoid_tb/x_tb
+add wave -position end  sim:/pwla_sigmoid_tb/f_x_tb
+run
+# f_x = 0.000000
