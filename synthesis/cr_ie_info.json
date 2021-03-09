@@ -1,0 +1,22 @@
+{
+	"system" : {
+		"platform" : "linux64",
+		"os_name" : "Fedora Core",
+		"os_version" : ""
+	},
+	"error" : {
+		"executable" : "quartus_map",
+		"comment" : "not_applicable",
+		"error_message" : "actual->IsPacked()",
+		"source_file" : "/quartus/synth/vrfx/verific/verilog/veriexpression_elab.cpp",
+		"line" : "2476",
+		"stack_trace" : "\t0x7f61182d411d: synth_vrfx + 0x12411d (_Z18vrfx_altera_assertbPKciS0_ + 0x1d)\n\t0x7f611839bc8c: synth_vrfx + 0x1ebc8c (_ZN14VeriExpression21CreateOrderedPortRefsEP8Instancej + 0x142)\n\t0x7f611839c495: synth_vrfx + 0x1ec495 (_ZN15VeriPortConnect21CreateUnknownPortRefsEP8Instancej + 0x73)\n\t0x7f6118380e30: synth_vrfx + 0x1d0e30 (_ZN8VeriInst14CreatePortRefsEP8InstancePK5Array + 0x306)\n\t0x7f61183810e5: synth_vrfx + 0x1d10e5 (_ZN8VeriInst17InstantiateModuleEP7NetlistP3MapP5Array + 0x223)\n\t0x7f6118388d21: synth_vrfx + 0x1d8d21 (_ZN8VeriInst17InstantiateModuleEPKc + 0x68f)\n\t0x7f61183d9d95: synth_vrfx + 0x229d95 (_ZN23VeriModuleInstantiation9ElaborateEv + 0x23b)\n\t0x7f61183ce397: synth_vrfx + 0x21e397 (_ZN10VeriModule9ElaborateEv + 0x8d)\n\t0x7f61183ce07f: synth_vrfx + 0x21e07f (_ZN10VeriModule9ElaborateEP7LibraryP3MapP5ArrayjPP9VeriScopejP17VeriConfigurationP20BASEX_ELABORATE_INFO + 0x5ab)\n\t0x7f61182f5d5b: synth_vrfx + 0x145d5b (_ZN31VRFX_VERIFIC_VERILOG_ELABORATOR9elaborateEP20BASEX_ELABORATE_INFO + 0x8d7)\n\t0x7f61182eb4ba: synth_vrfx + 0x13b4ba (_ZN15VRFX_ELABORATOR9elaborateEP20BASEX_ELABORATE_INFO + 0x8a)\n\t0x7f6119ab547e: synth_sgn + 0x17947e (_ZNK10SGN_FN_LIB9elaborateEP20BASEX_ELAB_INFO_CORE + 0x18e)\n\t0x7f6119abd8ee: synth_sgn + 0x1818ee (_ZNK10SGN_FN_LIB14start_vrf_flowEv + 0xe)\n\t0x7f6119abe51d: synth_sgn + 0x18251d (_ZN10SGN_FN_LIB5startEP16SGN_WRAPPER_INFO + 0xb6d)\n\t0x7f6119ac2f49: synth_sgn + 0x186f49 (_ZNK13SGN_EXTRACTOR24single_module_extractionEP17HDB_INSTANCE_NAMEP10HDB_ENTITYP16SGN_WRAPPER_INFO + 0x119)\n\t0x7f6119acb6a1: synth_sgn + 0x18f6a1 (_ZN13SGN_EXTRACTOR20recursive_extractionEP17HDB_INSTANCE_NAMEP16SGN_WRAPPER_INFOPKc + 0xf1)\n\t0x7f6119ad7990: synth_sgn + 0x19b990 (_ZN13SGN_EXTRACTOR7extractEv + 0x2b0)\n\t0x7f6119ae2200: synth_sgn + 0x1a6200 (_Z12sgn_qic_fullP10CMP_FACADERSt6vectorISsSaISsEERS1_IdSaIdEE + 0x250)\n\t   0x419773: quartus_map + 0x19773 (_Z16qsyn_execute_sgnP10CMP_FACADERSt6vectorISsSaISsEERKSsP14THR_NAMED_PIPES8_ + 0x173)\n\t   0x434a09: quartus_map + 0x34a09 (_ZN14QSYN_FRAMEWORK12execute_coreEP14THR_NAMED_PIPES1_ + 0x219)\n\t   0x43771f: quartus_map + 0x3771f (_ZN14QSYN_FRAMEWORK7executeEv + 0x8af)\n\t0x7f611303e026: comp_qexe + 0x1b026 (_Z18qexe_standard_mainP14QEXE_FRAMEWORKPPK22QEXE_OPTION_DEFINITIONiPPKc + 0x6a7)\n\t   0x42b821: quartus_map + 0x2b821 (_Z9qsyn_mainiPPKc + 0x151)\n\t0x7f60feea2e30: ccl_msg + 0x3ee30 (_Z15msg_main_threadPv + 0x10)\n\t0x7f60fe568acc: ccl_thr + 0x5acc (thr_final_wrapper + 0xc)\n\t0x7f60feea2eef: ccl_msg + 0x3eeef (_Z18msg_thread_wrapperPFPvS_ES_ + 0x62)\n\t0x7f60fe5dbf9c: ccl_mem + 0x9f9c (_Z18mem_thread_wrapperPFPvS_ES_ + 0x5c)\n\t0x7f60fe5a8b39: ccl_err + 0x8b39 (_Z18err_thread_wrapperPFPvS_ES_ + 0x27)\n\t0x7f60fe568b0f: ccl_thr + 0x5b0f (thr_thread_wrapper + 0x15)\n\t0x7f60feea4ea1: ccl_msg + 0x40ea1 (_Z12msg_exe_mainiPPKcPFiiS1_E + 0xb2)\n\t0x7f60f99ca1e2: c.so.6 + 0x281e2 (__libc_start_main + 0xf2)\n\t   0x4140b5: quartus_map + 0x140b5\n",
+		"subsystem" : "VRFX"
+	},
+	"quartus" : {
+		"quartus_bits" : "64",
+		"version" : "20.1.1",
+		"build" : "720",
+		"edition" : "Lite Edition"
+	}
+}

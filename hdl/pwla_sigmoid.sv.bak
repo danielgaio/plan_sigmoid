@@ -1,36 +1,76 @@
 `timescale 1ns / 1ps
 
-module pwla_sigmoid (input reg [15:0]x, output wire [15:0]f_x);
+module pwla_sigmoid (
+	input logic [15:0]x,
+	input logic clk,
+	input logic reset,
+	output logic [15:0]f_x);
 
-	reg [15:0]x_int;
-	reg [15:0]result;
+	logic [15:0] x_int;
+	logic [15:0] x_mod;
+	logic [15:0] x_mod_plus;
+	logic [15:0] x_register;
+	logic [15:0] result;
 	
 	always @ (*) begin
-	
-		x_int = x * 1024;
-		// implementação da equação por partes
-		// nesse momento considerar que o x de entrada é sempre positivo
-		if (x_int >= 5120) begin
-			result = 1024;
-		end else if (x_int >= 2432 && x_int < 5120) begin
-			result = (x_int + 864) >> 5;
-		end else if (x_int >= 1024 && x_int < 2432) begin
-			result = (x_int + 640) >> 3;
-		end else if (x_int >= 0 && x_int < 1024) begin
-			result = (x_int + 512) >> 2;
+
+		if (reset) begin
+			// criar registrador aqui
+			x_register <= x;
+
 		end else begin
-			result = 0;
-		end
+
+			// multiplicar entrada já registrada
+			x_int <= x_register << 10; // * 1024
+
+			// fazer complemento
+			if (x_register[15] == 1) begin
+				// inverter bits de x
+				x_mod <= ~x_int;
+				// somar 1
+				x_mod_plus <= x_mod + 1;
+			end else begin
+				x_mod <= 16'b1111111111111111;
+				x_mod_plus <= x_int;
+			end
+
+			// implementação da equação por partes
+			// --------------------------------------------------------------
+			if (x_mod_plus >= 5120) begin
+				result <= 1024;
+			end else if (x_mod_plus >= 2432 && x_mod_plus < 5120) begin
+				result <= (x_mod_plus + 864) << 5;
+			end else if (x_mod_plus >= 1024 && x_mod_plus < 2432) begin
+				result <= (x_mod_plus + 640) << 3;
+			end else if (x_mod_plus >= 0 && x_mod_plus < 1024) begin
+				result <= (x_mod_plus + 512) << 2;
+			end else begin
+				result <= 0;
+			end
+			// --------------------------------------------------------------
+
+			// --------------------------------------------------------------
+//			if (x_mod_plus >= 5) begin
+//				result <= 1;
+//			end else if (x_mod_plus >= 2.375 && x_mod_plus < 5) begin
+//				result <= (x_mod_plus + 0.84375) * 0.03125;
+//			end else if (x_mod_plus >= 1 && x_mod_plus < 2.375) begin
+//				result <= (x_mod_plus + 0.625) * 0.625;
+//			end else if (x_mod_plus >= 0 && x_mod_plus < 1) begin
+//				result <= (x_mod_plus + 0.5) * 0.25;
+//			end else begin
+//				result <= 0;
+//			end
+			// --------------------------------------------------------------
+
+			// check if input is negative
+			if (x_register[15] == 1) begin
+				f_x <= 1-result;
+			end else begin
+				f_x <= result;
+			end
+		end // reset
 		
 	end // always
-	
-	initial begin
-		// check if input is negative
-		if (x[15] == 1) begin
-			assign f_x = 1-result;
-		end else begin
-			f_x = result;
-		end
-	end
 
 endmodule

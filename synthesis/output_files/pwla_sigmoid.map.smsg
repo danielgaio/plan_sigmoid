@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at pwla_sigmoid.sv(12): always construct contains both blocking and non-blocking assignments File: /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv Line: 12
