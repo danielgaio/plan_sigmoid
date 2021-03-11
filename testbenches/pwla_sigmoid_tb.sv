@@ -5,7 +5,8 @@
 module pwla_sigmoid_tb();
 
 	logic [15:0] x_tb, f_x_tb;
-	logic clk_tb, reset_tb;
+	logic clk_tb;
+	//logic reset_tb;
 
 	shortreal generated_results [65536:0];
 	logic j;
@@ -15,7 +16,7 @@ module pwla_sigmoid_tb();
 	pwla_sigmoid pwla_sigmoid_DUT(
 		.x(x_tb),
 		.clk(clk_tb),
-		.reset(reset_tb),
+		//.reset(reset_tb),
 		.f_x(f_x_tb)
 	);
 
@@ -26,11 +27,13 @@ module pwla_sigmoid_tb();
 	// stimulus
 	initial begin
 		fork
-			x_tb = 5;
-			reset_tb = 1;
-			#10
-			reset_tb = 0;
-			#60
+			// inicializar registrador de entrada
+			x_tb = -4.5 * 1024;
+			//reset_tb = 1;
+			
+			#30
+			//reset_tb = 0;
+			//#60
 			$display("f_x = %f", f_x_tb);
 		join
 		$stop;

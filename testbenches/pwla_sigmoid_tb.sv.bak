@@ -5,31 +5,34 @@
 module pwla_sigmoid_tb();
 
 	logic [15:0] x_tb, f_x_tb;
-	logic clk_tb, reset_tb;
+	logic clk_tb;
+	//logic reset_tb;
 
 	shortreal generated_results [65536:0];
 	logic j;
-	integer i;
+	shortreal i;
 
 	// test module
 	pwla_sigmoid pwla_sigmoid_DUT(
 		.x(x_tb),
 		.clk(clk_tb),
-		.reset(reset_tb),
+		//.reset(reset_tb),
 		.f_x(f_x_tb)
 	);
 
 	// bloco gerador de clock
 	initial clk_tb = 0;
-	always #10 clk_tb = ~clk_tb;
+	always #5 clk_tb = ~clk_tb;
 
 	// stimulus
 	initial begin
 		fork
-			x_tb = 5;
-			reset_tb = 1;
+			// inicializar registrador de entrada
+			x_tb = 0.45 * 1024;
+			//reset_tb = 1;
+			
 			#10
-			reset_tb = 0;
+			//reset_tb = 0;
 			#60
 			$display("f_x = %f", f_x_tb);
 		join

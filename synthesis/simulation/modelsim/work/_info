@@ -11,24 +11,24 @@ cModel Technology
 Z0 d/home/daniel/Documents/GitHub/pwla_sigmoid/synthesis/simulation/modelsim
 vpwla_sigmoid
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1615314694
+Z2 !s110 1615421674
 !i10b 1
-!s100 ?dgRDC`ACoeSi=[:;EkoC0
+!s100 8eeT@9_b^JanUMS0YFh1O0
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I^;2P<94ZlLUU2BheC22@_2
+I=8^TMT^7a@cKo?FndB6[D2
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1615299501
+w1615421658
 8/home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv
 F/home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv
-!i122 108
-L0 3 78
+!i122 129
+L0 3 60
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1615314694.000000
+Z6 !s108 1615421674.000000
 !s107 /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv|
 !i113 1
@@ -38,17 +38,17 @@ vpwla_sigmoid_tb
 R1
 R2
 !i10b 1
-!s100 3?OkiT?OS64?Sk^Am;MI[1
+!s100 @Tm9PGA=cJCH[Z8dbUh;n3
 R3
-I0oW@B^hUPfHQEBPzl9_?Y0
+I;L^Ec4eYcmX^l2HfO9>E00
 R4
 S1
 R0
-w1615314689
+w1615418582
 8/home/daniel/Documents/GitHub/pwla_sigmoid/testbenches/pwla_sigmoid_tb.sv
 F/home/daniel/Documents/GitHub/pwla_sigmoid/testbenches/pwla_sigmoid_tb.sv
-!i122 109
-L0 5 53
+!i122 130
+L0 5 56
 R5
 r1
 !s85 0

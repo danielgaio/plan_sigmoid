@@ -1,5 +1,5 @@
 Flow report for pwla_sigmoid
-Tue Mar  9 14:33:39 2021
+Wed Mar 10 14:12:48 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Mar  9 14:33:39 2021       ;
+; Flow Status                        ; Successful - Wed Mar 10 14:12:48 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; pwla_sigmoid                                ;
 ; Top-level Entity Name              ; pwla_sigmoid                                ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 116                                         ;
-;     Total combinational functions  ; 107                                         ;
-;     Dedicated logic registers      ; 62                                          ;
-; Total registers                    ; 62                                          ;
+; Total logic elements               ; 170                                         ;
+;     Total combinational functions  ; 170                                         ;
+;     Dedicated logic registers      ; 15                                          ;
+; Total registers                    ; 15                                          ;
 ; Total pins                         ; 34                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/09/2021 14:33:32 ;
+; Start date & time ; 03/10/2021 14:12:41 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; pwla_sigmoid        ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 176507751568776.161531121203504        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 176507751568776.161539636125696        ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;

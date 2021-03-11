@@ -8,10 +8,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "f_x[1]",
-					"strict" : false
-				},
-				{
 					"name" : "f_x[2]",
 					"strict" : false
 				},
@@ -68,39 +64,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk",
-					"strict" : false
-				},
-				{
-					"name" : "reset",
-					"strict" : false
-				},
-				{
 					"name" : "x[15]",
-					"strict" : false
-				},
-				{
-					"name" : "x[5]",
-					"strict" : false
-				},
-				{
-					"name" : "x[8]",
-					"strict" : false
-				},
-				{
-					"name" : "x[7]",
-					"strict" : false
-				},
-				{
-					"name" : "x[10]",
-					"strict" : false
-				},
-				{
-					"name" : "x[11]",
-					"strict" : false
-				},
-				{
-					"name" : "x[9]",
 					"strict" : false
 				},
 				{
@@ -116,7 +80,31 @@
 					"strict" : false
 				},
 				{
+					"name" : "x[11]",
+					"strict" : false
+				},
+				{
+					"name" : "x[10]",
+					"strict" : false
+				},
+				{
+					"name" : "x[9]",
+					"strict" : false
+				},
+				{
+					"name" : "x[8]",
+					"strict" : false
+				},
+				{
+					"name" : "x[7]",
+					"strict" : false
+				},
+				{
 					"name" : "x[6]",
+					"strict" : false
+				},
+				{
+					"name" : "x[5]",
 					"strict" : false
 				},
 				{
@@ -137,6 +125,14 @@
 				},
 				{
 					"name" : "x[0]",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
 					"strict" : false
 				}
 			]
