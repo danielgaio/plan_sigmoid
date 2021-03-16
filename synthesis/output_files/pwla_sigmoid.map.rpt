@@ -1,5 +1,5 @@
 Analysis & Synthesis report for pwla_sigmoid
-Wed Mar 10 14:12:48 2021
+Tue Mar 16 16:45:59 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -19,6 +19,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  11. Post-Synthesis Netlist Statistics for Top Partition
  12. Elapsed Time Per Partition
  13. Analysis & Synthesis Messages
+ 14. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -45,16 +46,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Mar 10 14:12:48 2021       ;
+; Analysis & Synthesis Status        ; Successful - Tue Mar 16 16:45:59 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; pwla_sigmoid                                ;
 ; Top-level Entity Name              ; pwla_sigmoid                                ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 170                                         ;
-;     Total combinational functions  ; 170                                         ;
-;     Dedicated logic registers      ; 15                                          ;
-; Total registers                    ; 15                                          ;
-; Total pins                         ; 34                                          ;
+; Total logic elements               ; 53                                          ;
+;     Total combinational functions  ; 53                                          ;
+;     Dedicated logic registers      ; 13                                          ;
+; Total registers                    ; 13                                          ;
+; Total pins                         ; 33                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -156,10 +157,12 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -177,30 +180,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 170         ;
+; Estimated Total logic elements              ; 53          ;
 ;                                             ;             ;
-; Total combinational functions               ; 170         ;
+; Total combinational functions               ; 53          ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 85          ;
-;     -- 3 input functions                    ; 36          ;
-;     -- <=2 input functions                  ; 49          ;
+;     -- 4 input functions                    ; 27          ;
+;     -- 3 input functions                    ; 7           ;
+;     -- <=2 input functions                  ; 19          ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 120         ;
-;     -- arithmetic mode                      ; 50          ;
+;     -- normal mode                          ; 40          ;
+;     -- arithmetic mode                      ; 13          ;
 ;                                             ;             ;
-; Total registers                             ; 15          ;
-;     -- Dedicated logic registers            ; 15          ;
+; Total registers                             ; 13          ;
+;     -- Dedicated logic registers            ; 13          ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
-; I/O pins                                    ; 34          ;
+; I/O pins                                    ; 33          ;
 ;                                             ;             ;
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; x[15]~input ;
-; Maximum fan-out                             ; 39          ;
-; Total fan-out                               ; 627         ;
-; Average fan-out                             ; 2.48        ;
+; Maximum fan-out                             ; 14          ;
+; Total fan-out                               ; 252         ;
+; Average fan-out                             ; 1.91        ;
 +---------------------------------------------+-------------+
 
 
@@ -209,7 +212,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name  ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+--------------+
-; |pwla_sigmoid              ; 170 (170)           ; 15 (15)                   ; 0           ; 0            ; 0       ; 0         ; 34   ; 0            ; |pwla_sigmoid       ; pwla_sigmoid ; work         ;
+; |pwla_sigmoid              ; 53 (53)             ; 13 (13)                   ; 0           ; 0            ; 0       ; 0         ; 33   ; 0            ; |pwla_sigmoid       ; pwla_sigmoid ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -219,8 +222,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------+----------------------------------------+
 ; Register name                         ; Reason for Removal                     ;
 +---------------------------------------+----------------------------------------+
-; f_x[1]~reg0                           ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 1 ;                                        ;
+; f_x[15]~reg0                          ; Stuck at GND due to stuck port data_in ;
+; f_x[13]~reg0                          ; Stuck at GND due to stuck port data_in ;
+; f_x[14]~reg0                          ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 3 ;                                        ;
 +---------------------------------------+----------------------------------------+
 
 
@@ -229,9 +234,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 15    ;
-; Number of registers using Synchronous Clear  ; 1     ;
-; Number of registers using Synchronous Load   ; 1     ;
+; Total registers                              ; 13    ;
+; Number of registers using Synchronous Clear  ; 6     ;
+; Number of registers using Synchronous Load   ; 7     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
@@ -244,9 +249,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; Yes        ; |pwla_sigmoid|f_x[4]~reg0  ;
-; 9:1                ; 6 bits    ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; Yes        ; |pwla_sigmoid|f_x[10]~reg0 ;
-; 9:1                ; 4 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |pwla_sigmoid|f_x[14]~reg0 ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |pwla_sigmoid|f_x[12]~reg0 ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |pwla_sigmoid|f_x[0]~reg0  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -255,23 +259,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 34                          ;
-; cycloneiii_ff         ; 15                          ;
-;     SCLR SLD          ; 1                           ;
-;     plain             ; 14                          ;
-; cycloneiii_lcell_comb ; 171                         ;
-;     arith             ; 50                          ;
-;         2 data inputs ; 39                          ;
-;         3 data inputs ; 11                          ;
-;     normal            ; 121                         ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 9                           ;
-;         3 data inputs ; 25                          ;
-;         4 data inputs ; 85                          ;
+; boundary_port         ; 33                          ;
+; cycloneiii_ff         ; 13                          ;
+;     SCLR SLD          ; 6                           ;
+;     SLD               ; 1                           ;
+;     plain             ; 6                           ;
+; cycloneiii_lcell_comb ; 53                          ;
+;     arith             ; 13                          ;
+;         2 data inputs ; 13                          ;
+;     normal            ; 40                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 27                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 12.20                       ;
-; Average LUT depth     ; 8.84                        ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 3.23                        ;
 +-----------------------+-----------------------------+
 
 
@@ -290,36 +294,42 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Mar 10 14:12:41 2021
+    Info: Processing started: Tue Mar 16 16:45:51 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pwla_sigmoid -c pwla_sigmoid
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/intf.sv
-    Info (12023): Found entity 1: intf File: /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/intf.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv
     Info (12023): Found entity 1: pwla_sigmoid File: /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv Line: 3
 Info (12127): Elaborating entity "pwla_sigmoid" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at pwla_sigmoid.sv(26): truncated value with size 32 to match size of target (16) File: /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv Line: 26
-Warning (10230): Verilog HDL assignment warning at pwla_sigmoid.sv(34): truncated value with size 32 to match size of target (16) File: /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv Line: 34
-Warning (10230): Verilog HDL assignment warning at pwla_sigmoid.sv(40): truncated value with size 32 to match size of target (16) File: /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv Line: 40
-Warning (10230): Verilog HDL assignment warning at pwla_sigmoid.sv(42): truncated value with size 32 to match size of target (16) File: /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv Line: 42
-Warning (10230): Verilog HDL assignment warning at pwla_sigmoid.sv(46): truncated value with size 32 to match size of target (16) File: /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv Line: 46
-Warning (10230): Verilog HDL assignment warning at pwla_sigmoid.sv(48): truncated value with size 32 to match size of target (16) File: /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv Line: 48
-Warning (10230): Verilog HDL assignment warning at pwla_sigmoid.sv(52): truncated value with size 32 to match size of target (16) File: /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv Line: 52
-Warning (10230): Verilog HDL assignment warning at pwla_sigmoid.sv(54): truncated value with size 32 to match size of target (16) File: /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv Line: 54
+Warning (10230): Verilog HDL assignment warning at pwla_sigmoid.sv(27): truncated value with size 32 to match size of target (16) File: /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv Line: 27
+Warning (10230): Verilog HDL assignment warning at pwla_sigmoid.sv(30): truncated value with size 32 to match size of target (16) File: /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv Line: 30
+Warning (10230): Verilog HDL assignment warning at pwla_sigmoid.sv(33): truncated value with size 32 to match size of target (16) File: /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv Line: 33
+Warning (10230): Verilog HDL assignment warning at pwla_sigmoid.sv(36): truncated value with size 32 to match size of target (16) File: /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv Line: 36
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "f_x[1]" is stuck at GND File: /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv Line: 13
+    Warning (13410): Pin "f_x[13]" is stuck at GND File: /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv Line: 19
+    Warning (13410): Pin "f_x[14]" is stuck at GND File: /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv Line: 19
+    Warning (13410): Pin "f_x[15]" is stuck at GND File: /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv Line: 19
 Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file /home/daniel/Documents/GitHub/pwla_sigmoid/synthesis/output_files/pwla_sigmoid.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 204 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 18 input pins
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "x[1]" File: /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv Line: 4
+    Warning (15610): No output dependent on input pin "x[0]" File: /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv Line: 4
+Info (21057): Implemented 86 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 17 input pins
     Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 170 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 608 megabytes
-    Info: Processing ended: Wed Mar 10 14:12:48 2021
-    Info: Elapsed time: 00:00:07
+    Info (21061): Implemented 53 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 641 megabytes
+    Info: Processing ended: Tue Mar 16 16:45:59 2021
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:19
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /home/daniel/Documents/GitHub/pwla_sigmoid/synthesis/output_files/pwla_sigmoid.map.smsg.
 
 
