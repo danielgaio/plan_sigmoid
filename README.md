@@ -1,2 +1,2 @@
 # pwla_sigmoid
- Implementação da função sigmoid pelo método Piece Wise Linear Aproximation
+ Implementação da função sigmoid pelo método Piecewise Linear Aproximation of Non Linear Function (PLAN).
