@@ -1,9 +1,0 @@
-module top;
- 
-  intf (Bus.sinais_externos);
- 
-  combin u1(combif.DUT);
- 
-  combin_tb t1(combif.TEST);
- 
-endmodule

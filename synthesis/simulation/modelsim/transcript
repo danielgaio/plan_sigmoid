@@ -35437,3 +35437,5 @@ run
 # ** Note: $stop    : /home/daniel/Documents/GitHub/pwla_sigmoid/testbenches/pwla_sigmoid_tb.sv(135)
 #    Time: 10510500 ps  Iteration: 0  Instance: /pwla_sigmoid_tb
 # Break in Module pwla_sigmoid_tb at /home/daniel/Documents/GitHub/pwla_sigmoid/testbenches/pwla_sigmoid_tb.sv line 135
+# End time: 20:56:18 on Mar 16,2021, Elapsed time: 0:41:35
+# Errors: 0, Warnings: 1

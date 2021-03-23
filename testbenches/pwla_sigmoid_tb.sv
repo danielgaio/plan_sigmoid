@@ -1,10 +1,11 @@
+// arquivo de testbench para a parte sitetizavel
+
 `timescale 1ns/1ps
 
 module pwla_sigmoid_tb();
 
 	logic [15:0] x_tb, f_x_tb;
 	logic clk_tb;
-	//logic reset_tb;
 
 	shortreal 	generated_results [1000];
 	shortreal 	expected_results [1000];
@@ -18,7 +19,6 @@ module pwla_sigmoid_tb();
 	pwla_sigmoid pwla_sigmoid_DUT(
 		.x(x_tb),
 		.clk(clk_tb),
-		//.reset(reset_tb),
 		.f_x(f_x_tb)
 	);
 
@@ -38,21 +38,10 @@ module pwla_sigmoid_tb();
 	// bloco do reset: em reset no primeiro ciclo
 	//initial begin reset_tb = 1; #9.9 reset_tb = 0; end
 
-	// stimulus
+	// estimulos
 	initial begin
-		//fork
-			// inicializar registrador de entrada
-			//x_tb = -4.5 * 1024;
-			//reset_tb = 1;
-			
-			//#30
-			//reset_tb = 0;
-			//#60
-			//$display("f_x = %f", 1-(f_x_tb/1024));
-		//join
-		//$stop;
 
-		// sessão para geração de valores de entrada
+		// secao para geracao de valores de entrada
 		fork
 			passo = -8;
 			// intervalo de [-8,+8]
@@ -66,19 +55,21 @@ module pwla_sigmoid_tb();
 					x_tb = passo*1024;
 				end
 				
-				//$display("x int: %d | x normal: %f", x_tb, passo);
 				#10.5
+
 				if (passo < 0) begin
+
 					if (clk_counter > 1) begin
 						generated_results [i-1] = 1 - (shortreal'(f_x_tb)/shortreal'(1024));
-						//generated_results [i] = 1 - (shortreal'(f_x_tb)/shortreal'(1024));
 						$display("generated result [%d]: %f", i-1, generated_results[i-1]);
 					end
+
 				end else begin
+
 					generated_results [i-1] = (shortreal'(f_x_tb)/shortreal'(1024));
 					$display("generated result [%d]: %f", i-1, generated_results[i-1]);
+
 				end
-				//$display("f_x transformed: %d | f_x normal: %f", f_x_tb, generated_results [i-1]);
 				passo += 0.016;
 			end
 		join
@@ -87,7 +78,6 @@ module pwla_sigmoid_tb();
 		// calculando valor preciso e guardando em expected_results
 		fork
 			passo = -8;
-			// com passo = 0.0002138 são necessárias 65536 iterações para varer [-7,+7]
 			for (k=0; k<1000; k++) begin
 				expected_results[k] = 1.0/(1.0+(2.718281828**(-passo)));
 				$display("expected_results[%d]: %f", k, expected_results[k]);
@@ -96,17 +86,13 @@ module pwla_sigmoid_tb();
 		join
 		$stop;
 
-		// calcular as diferenças entre valor gerado e valor esperado
+		// calcular as diferencas entre valor gerado e valor esperado
 		fork
 			
 			max_error = 0;
 			for (k = 0; k < 1000; k++) begin
 				temp = expected_results[k];
 				temp2 = generated_results[k];
-
-				//erro_absoluto += (((temp2 - temp) / temp) < 0) ? -((temp2 - temp) / temp) : ((temp2 - temp) / temp);
-
-				//$display("erro_absoluto: %f", erro_absoluto);
 				
 				// calculando o erro maximo
 				if ((temp2 - temp) > max_error)
@@ -120,11 +106,6 @@ module pwla_sigmoid_tb();
 				end
 			end
 
-			// exibindo também o erro absoluto
-			//erro_absoluto /= 1000;
-			//$display("Erro absoluto: %f", erro_absoluto);
-
-			// erro medio
 			//erro_medio = erro_medio/1000;
 			erro_medio /= 1000;
 			$display("Erro medio: %f", erro_medio);

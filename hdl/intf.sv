@@ -1,3 +1,5 @@
+// essa interface não esta sendo utilizada no projeto
+
 // pinos externos
 interface intf;
 	
