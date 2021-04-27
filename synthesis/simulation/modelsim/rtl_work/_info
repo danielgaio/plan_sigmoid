@@ -11,24 +11,24 @@ cModel Technology
 Z0 d/home/daniel/Documents/GitHub/pwla_sigmoid/synthesis/simulation/modelsim
 vpwla_sigmoid
 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-!s110 1615903579
+!s110 1619306288
 !i10b 1
-!s100 QcGI@2Y9An01nmK05S1@g1
+!s100 ECZU^We]Y=jF;ef6SEP9K0
 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I;[WRU=TELHYjeA<T@eoN=2
+IAmMW5IW3mXomjhT1M`HVL0
 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1615903343
+w1616457836
 8/home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv
 F/home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv
 !i122 0
-L0 3 39
+L0 5 35
 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1615903579.000000
+!s108 1619306288.000000
 !s107 /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/daniel/Documents/GitHub/pwla_sigmoid/hdl|/home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv|
 !i113 1

@@ -11,13 +11,13 @@
 # 
 # vlog -sv -work work +incdir+/home/daniel/Documents/GitHub/pwla_sigmoid/hdl {/home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:06:19 on Mar 16,2021
+# Start time: 20:18:08 on Apr 24,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/daniel/Documents/GitHub/pwla_sigmoid/hdl" /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv 
 # -- Compiling module pwla_sigmoid
 # 
 # Top level modules:
 # 	pwla_sigmoid
-# End time: 11:06:19 on Mar 16,2021, Elapsed time: 0:00:00
+# End time: 20:18:08 on Apr 24,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # 
