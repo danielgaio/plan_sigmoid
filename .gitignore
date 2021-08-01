@@ -1,0 +1,16 @@
+
+*.hdb
+*.hdb
+*.cdb
+*.ddb
+*.bpm
+*.logdb
+*.rdb
+*.db_info
+*.hier_info
+*.hif
+*.bpm
+*.cdb
+*.kpt
+*.qmsg
+*.nvd

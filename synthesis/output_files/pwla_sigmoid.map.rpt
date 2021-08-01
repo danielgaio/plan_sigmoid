@@ -1,5 +1,5 @@
 Analysis & Synthesis report for pwla_sigmoid
-Wed Mar 17 13:48:04 2021
+Sun Aug  1 10:12:18 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -46,7 +46,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Mar 17 13:48:04 2021       ;
+; Analysis & Synthesis Status        ; Successful - Sun Aug  1 10:12:18 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; pwla_sigmoid                                ;
 ; Top-level Entity Name              ; pwla_sigmoid                                ;
@@ -170,7 +170,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------------+----------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                   ; Library ;
 +----------------------------------+-----------------+------------------------------+----------------------------------------------------------------+---------+
-; ../hdl/pwla_sigmoid.sv           ; yes             ; User SystemVerilog HDL File  ; /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv ;         ;
+; ../hdl/pwla_sigmoid.sv           ; yes             ; User SystemVerilog HDL File  ; /home/daniel/Documents/GitHub/plan_sigmoid/hdl/pwla_sigmoid.sv ;         ;
 +----------------------------------+-----------------+------------------------------+----------------------------------------------------------------+---------+
 
 
@@ -293,42 +293,42 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Mar 17 13:47:56 2021
+    Info: Processing started: Sun Aug  1 10:12:09 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pwla_sigmoid -c pwla_sigmoid
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv
-    Info (12023): Found entity 1: pwla_sigmoid File: /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /home/daniel/Documents/GitHub/plan_sigmoid/hdl/pwla_sigmoid.sv
+    Info (12023): Found entity 1: pwla_sigmoid File: /home/daniel/Documents/GitHub/plan_sigmoid/hdl/pwla_sigmoid.sv Line: 5
 Info (12127): Elaborating entity "pwla_sigmoid" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at pwla_sigmoid.sv(27): truncated value with size 32 to match size of target (16) File: /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv Line: 27
-Warning (10230): Verilog HDL assignment warning at pwla_sigmoid.sv(30): truncated value with size 32 to match size of target (16) File: /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv Line: 30
-Warning (10230): Verilog HDL assignment warning at pwla_sigmoid.sv(33): truncated value with size 32 to match size of target (16) File: /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv Line: 33
-Warning (10230): Verilog HDL assignment warning at pwla_sigmoid.sv(36): truncated value with size 32 to match size of target (16) File: /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv Line: 36
+Warning (10230): Verilog HDL assignment warning at pwla_sigmoid.sv(21): truncated value with size 32 to match size of target (16) File: /home/daniel/Documents/GitHub/plan_sigmoid/hdl/pwla_sigmoid.sv Line: 21
+Warning (10230): Verilog HDL assignment warning at pwla_sigmoid.sv(25): truncated value with size 32 to match size of target (16) File: /home/daniel/Documents/GitHub/plan_sigmoid/hdl/pwla_sigmoid.sv Line: 25
+Warning (10230): Verilog HDL assignment warning at pwla_sigmoid.sv(29): truncated value with size 32 to match size of target (16) File: /home/daniel/Documents/GitHub/plan_sigmoid/hdl/pwla_sigmoid.sv Line: 29
+Warning (10230): Verilog HDL assignment warning at pwla_sigmoid.sv(33): truncated value with size 32 to match size of target (16) File: /home/daniel/Documents/GitHub/plan_sigmoid/hdl/pwla_sigmoid.sv Line: 33
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "f_x[13]" is stuck at GND File: /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv Line: 19
-    Warning (13410): Pin "f_x[14]" is stuck at GND File: /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv Line: 19
-    Warning (13410): Pin "f_x[15]" is stuck at GND File: /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv Line: 19
+    Warning (13410): Pin "f_x[13]" is stuck at GND File: /home/daniel/Documents/GitHub/plan_sigmoid/hdl/pwla_sigmoid.sv Line: 12
+    Warning (13410): Pin "f_x[14]" is stuck at GND File: /home/daniel/Documents/GitHub/plan_sigmoid/hdl/pwla_sigmoid.sv Line: 12
+    Warning (13410): Pin "f_x[15]" is stuck at GND File: /home/daniel/Documents/GitHub/plan_sigmoid/hdl/pwla_sigmoid.sv Line: 12
 Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file /home/daniel/Documents/GitHub/pwla_sigmoid/synthesis/output_files/pwla_sigmoid.map.smsg
+Info (144001): Generated suppressed messages file /home/daniel/Documents/GitHub/plan_sigmoid/synthesis/output_files/pwla_sigmoid.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "x[1]" File: /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv Line: 4
-    Warning (15610): No output dependent on input pin "x[0]" File: /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv Line: 4
+    Warning (15610): No output dependent on input pin "x[1]" File: /home/daniel/Documents/GitHub/plan_sigmoid/hdl/pwla_sigmoid.sv Line: 6
+    Warning (15610): No output dependent on input pin "x[0]" File: /home/daniel/Documents/GitHub/plan_sigmoid/hdl/pwla_sigmoid.sv Line: 6
 Info (21057): Implemented 86 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 17 input pins
     Info (21059): Implemented 16 output pins
     Info (21061): Implemented 53 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
     Info: Peak virtual memory: 621 megabytes
-    Info: Processing ended: Wed Mar 17 13:48:04 2021
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Processing ended: Sun Aug  1 10:12:18 2021
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:22
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in /home/daniel/Documents/GitHub/pwla_sigmoid/synthesis/output_files/pwla_sigmoid.map.smsg.
+The suppressed messages can be found in /home/daniel/Documents/GitHub/plan_sigmoid/synthesis/output_files/pwla_sigmoid.map.smsg.
 
 
