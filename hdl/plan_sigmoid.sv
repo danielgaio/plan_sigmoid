@@ -2,7 +2,7 @@
 
 `timescale 1ns / 1ps
 
-module pwla_sigmoid (
+module plan_sigmoid (
 	input 	logic [15:0] x,
 	input 	logic clk,
 	output 	logic [15:0] f_x

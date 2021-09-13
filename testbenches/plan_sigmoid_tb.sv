@@ -2,7 +2,7 @@
 
 `timescale 1ns/1ps
 
-module pwla_sigmoid_tb();
+module plan_sigmoid_tb();
 
 	logic [15:0] x_tb, f_x_tb;
 	logic clk_tb;
@@ -16,7 +16,7 @@ module pwla_sigmoid_tb();
 	int 		clk_counter;
 
 	// test module
-	pwla_sigmoid pwla_sigmoid_DUT(
+	plan_sigmoid plan_sigmoid_DUT(
 		.x(x_tb),
 		.clk(clk_tb),
 		.f_x(f_x_tb)
