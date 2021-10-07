@@ -1,5 +1,5 @@
 Fitter report for pwla_sigmoid
-Wed Mar 17 13:48:10 2021
+Wed Oct  6 22:15:22 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -67,10 +67,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Wed Mar 17 13:48:10 2021       ;
+; Fitter Status                      ; Successful - Wed Oct  6 22:15:22 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; pwla_sigmoid                                ;
-; Top-level Entity Name              ; pwla_sigmoid                                ;
+; Top-level Entity Name              ; plan_sigmoid                                ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE6E22C6                                 ;
 ; Timing Models                      ; Final                                       ;
@@ -215,7 +215,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in /home/daniel/Documents/GitHub/pwla_sigmoid/synthesis/output_files/pwla_sigmoid.pin.
+The pin-out file can be found in /home/danielgaio/Documents/GitHub/plan_sigmoid/synthesis/output_files/pwla_sigmoid.pin.
 
 
 +--------------------------------------------------------------------+
@@ -663,7 +663,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name ; Entity Name  ; Library Name ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+--------------+
-; |pwla_sigmoid              ; 59 (59)     ; 6 (6)                     ; 7 (7)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 33   ; 0            ; 53 (53)      ; 6 (6)             ; 0 (0)            ; |pwla_sigmoid       ; pwla_sigmoid ; work         ;
+; |plan_sigmoid              ; 59 (59)     ; 6 (6)                     ; 7 (7)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 33   ; 0            ; 53 (53)      ; 6 (6)             ; 0 (0)            ; |plan_sigmoid       ; plan_sigmoid ; work         ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1102,7 +1102,7 @@ Info (169124): Fitter converted 5 user pins into dedicated programming pins
     Info (169125): Pin ~ALTERA_nCEO~ is reserved at location 101
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
 Critical Warning (169085): No exact pin location assignment(s) for 33 pins of 33 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
-Info (332104): Reading SDC File: 'pwla_sigmoid.sdc'
+Info (332104): Reading SDC File: 'plan_sigmoid.sdc'
 Warning (332070): Port "clk" relative to the rising edge of clock "clk" does not specify a min-fall input delay
 Warning (332070): Port "clk" relative to the rising edge of clock "clk" does not specify a min-rise input delay
 Warning (332070): Port "x[0]" relative to the rising edge of clock "clk" does not specify a min-fall input delay
@@ -1176,7 +1176,7 @@ Info (332111): Found 1 clocks
     Info (332111):   Period   Clock Name
     Info (332111): ======== ============
     Info (332111):   10.500          clk
-Info (176353): Automatically promoted node clk~input (placed in PIN 23 (CLK1, DIFFCLK_0n)) File: /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv Line: 5
+Info (176353): Automatically promoted node clk~input (placed in PIN 23 (CLK1, DIFFCLK_0n)) File: /home/danielgaio/Documents/GitHub/plan_sigmoid/hdl/plan_sigmoid.sv Line: 7
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G2
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -1194,7 +1194,7 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  9 pins available
         Info (176213): I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  13 pins available
         Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  12 pins available
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -1207,16 +1207,16 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.09 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.08 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
-Info (144001): Generated suppressed messages file /home/daniel/Documents/GitHub/pwla_sigmoid/synthesis/output_files/pwla_sigmoid.fit.smsg
+Info (144001): Generated suppressed messages file /home/danielgaio/Documents/GitHub/plan_sigmoid/synthesis/output_files/pwla_sigmoid.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 72 warnings
-    Info: Peak virtual memory: 1168 megabytes
-    Info: Processing ended: Wed Mar 17 13:48:10 2021
+    Info: Peak virtual memory: 1165 megabytes
+    Info: Processing ended: Wed Oct  6 22:15:22 2021
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:06
 
@@ -1224,6 +1224,6 @@ Info: Quartus Prime Fitter was successful. 0 errors, 72 warnings
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in /home/daniel/Documents/GitHub/pwla_sigmoid/synthesis/output_files/pwla_sigmoid.fit.smsg.
+The suppressed messages can be found in /home/danielgaio/Documents/GitHub/plan_sigmoid/synthesis/output_files/pwla_sigmoid.fit.smsg.
 
 

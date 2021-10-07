@@ -1,5 +1,5 @@
 Analysis & Synthesis report for pwla_sigmoid
-Sun Aug  1 10:12:18 2021
+Wed Oct  6 22:15:17 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -46,10 +46,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Aug  1 10:12:18 2021       ;
+; Analysis & Synthesis Status        ; Successful - Wed Oct  6 22:15:17 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; pwla_sigmoid                                ;
-; Top-level Entity Name              ; pwla_sigmoid                                ;
+; Top-level Entity Name              ; plan_sigmoid                                ;
 ; Family                             ; Cyclone IV E                                ;
 ; Total logic elements               ; 53                                          ;
 ;     Total combinational functions  ; 53                                          ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
-; Top-level entity name                                            ; pwla_sigmoid       ; pwla_sigmoid       ;
+; Top-level entity name                                            ; plan_sigmoid       ; pwla_sigmoid       ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -165,13 +165,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                       ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                   ; Library ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------+---------+
-; ../hdl/pwla_sigmoid.sv           ; yes             ; User SystemVerilog HDL File  ; /home/daniel/Documents/GitHub/plan_sigmoid/hdl/pwla_sigmoid.sv ;         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                           ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                       ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------+---------+
+; ../hdl/plan_sigmoid.sv           ; yes             ; User SystemVerilog HDL File  ; /home/danielgaio/Documents/GitHub/plan_sigmoid/hdl/plan_sigmoid.sv ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -211,7 +211,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name  ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+--------------+
-; |pwla_sigmoid              ; 53 (53)             ; 13 (13)                   ; 0           ; 0            ; 0       ; 0         ; 33   ; 0            ; |pwla_sigmoid       ; pwla_sigmoid ; work         ;
+; |plan_sigmoid              ; 53 (53)             ; 13 (13)                   ; 0           ; 0            ; 0       ; 0         ; 33   ; 0            ; |plan_sigmoid       ; plan_sigmoid ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -248,8 +248,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |pwla_sigmoid|f_x[12]~reg0 ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |pwla_sigmoid|f_x[0]~reg0  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |plan_sigmoid|f_x[12]~reg0 ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |plan_sigmoid|f_x[0]~reg0  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -293,42 +293,42 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Aug  1 10:12:09 2021
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pwla_sigmoid -c pwla_sigmoid
+    Info: Processing started: Wed Oct  6 22:15:09 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off plan_sigmoid -c pwla_sigmoid
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file /home/daniel/Documents/GitHub/plan_sigmoid/hdl/pwla_sigmoid.sv
-    Info (12023): Found entity 1: pwla_sigmoid File: /home/daniel/Documents/GitHub/plan_sigmoid/hdl/pwla_sigmoid.sv Line: 5
-Info (12127): Elaborating entity "pwla_sigmoid" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at pwla_sigmoid.sv(21): truncated value with size 32 to match size of target (16) File: /home/daniel/Documents/GitHub/plan_sigmoid/hdl/pwla_sigmoid.sv Line: 21
-Warning (10230): Verilog HDL assignment warning at pwla_sigmoid.sv(25): truncated value with size 32 to match size of target (16) File: /home/daniel/Documents/GitHub/plan_sigmoid/hdl/pwla_sigmoid.sv Line: 25
-Warning (10230): Verilog HDL assignment warning at pwla_sigmoid.sv(29): truncated value with size 32 to match size of target (16) File: /home/daniel/Documents/GitHub/plan_sigmoid/hdl/pwla_sigmoid.sv Line: 29
-Warning (10230): Verilog HDL assignment warning at pwla_sigmoid.sv(33): truncated value with size 32 to match size of target (16) File: /home/daniel/Documents/GitHub/plan_sigmoid/hdl/pwla_sigmoid.sv Line: 33
+Info (12021): Found 1 design units, including 1 entities, in source file /home/danielgaio/Documents/GitHub/plan_sigmoid/hdl/plan_sigmoid.sv
+    Info (12023): Found entity 1: plan_sigmoid File: /home/danielgaio/Documents/GitHub/plan_sigmoid/hdl/plan_sigmoid.sv Line: 5
+Info (12127): Elaborating entity "plan_sigmoid" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at plan_sigmoid.sv(21): truncated value with size 32 to match size of target (16) File: /home/danielgaio/Documents/GitHub/plan_sigmoid/hdl/plan_sigmoid.sv Line: 21
+Warning (10230): Verilog HDL assignment warning at plan_sigmoid.sv(25): truncated value with size 32 to match size of target (16) File: /home/danielgaio/Documents/GitHub/plan_sigmoid/hdl/plan_sigmoid.sv Line: 25
+Warning (10230): Verilog HDL assignment warning at plan_sigmoid.sv(29): truncated value with size 32 to match size of target (16) File: /home/danielgaio/Documents/GitHub/plan_sigmoid/hdl/plan_sigmoid.sv Line: 29
+Warning (10230): Verilog HDL assignment warning at plan_sigmoid.sv(33): truncated value with size 32 to match size of target (16) File: /home/danielgaio/Documents/GitHub/plan_sigmoid/hdl/plan_sigmoid.sv Line: 33
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "f_x[13]" is stuck at GND File: /home/daniel/Documents/GitHub/plan_sigmoid/hdl/pwla_sigmoid.sv Line: 12
-    Warning (13410): Pin "f_x[14]" is stuck at GND File: /home/daniel/Documents/GitHub/plan_sigmoid/hdl/pwla_sigmoid.sv Line: 12
-    Warning (13410): Pin "f_x[15]" is stuck at GND File: /home/daniel/Documents/GitHub/plan_sigmoid/hdl/pwla_sigmoid.sv Line: 12
+    Warning (13410): Pin "f_x[13]" is stuck at GND File: /home/danielgaio/Documents/GitHub/plan_sigmoid/hdl/plan_sigmoid.sv Line: 12
+    Warning (13410): Pin "f_x[14]" is stuck at GND File: /home/danielgaio/Documents/GitHub/plan_sigmoid/hdl/plan_sigmoid.sv Line: 12
+    Warning (13410): Pin "f_x[15]" is stuck at GND File: /home/danielgaio/Documents/GitHub/plan_sigmoid/hdl/plan_sigmoid.sv Line: 12
 Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file /home/daniel/Documents/GitHub/plan_sigmoid/synthesis/output_files/pwla_sigmoid.map.smsg
+Info (144001): Generated suppressed messages file /home/danielgaio/Documents/GitHub/plan_sigmoid/synthesis/output_files/pwla_sigmoid.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "x[1]" File: /home/daniel/Documents/GitHub/plan_sigmoid/hdl/pwla_sigmoid.sv Line: 6
-    Warning (15610): No output dependent on input pin "x[0]" File: /home/daniel/Documents/GitHub/plan_sigmoid/hdl/pwla_sigmoid.sv Line: 6
+    Warning (15610): No output dependent on input pin "x[1]" File: /home/danielgaio/Documents/GitHub/plan_sigmoid/hdl/plan_sigmoid.sv Line: 6
+    Warning (15610): No output dependent on input pin "x[0]" File: /home/danielgaio/Documents/GitHub/plan_sigmoid/hdl/plan_sigmoid.sv Line: 6
 Info (21057): Implemented 86 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 17 input pins
     Info (21059): Implemented 16 output pins
     Info (21061): Implemented 53 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 621 megabytes
-    Info: Processing ended: Sun Aug  1 10:12:18 2021
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:22
+    Info: Peak virtual memory: 624 megabytes
+    Info: Processing ended: Wed Oct  6 22:15:17 2021
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:19
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in /home/daniel/Documents/GitHub/plan_sigmoid/synthesis/output_files/pwla_sigmoid.map.smsg.
+The suppressed messages can be found in /home/danielgaio/Documents/GitHub/plan_sigmoid/synthesis/output_files/pwla_sigmoid.map.smsg.
 
 

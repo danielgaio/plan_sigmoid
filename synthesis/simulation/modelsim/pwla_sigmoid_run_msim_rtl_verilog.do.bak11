@@ -5,5 +5,5 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -sv -work work +incdir+/home/daniel/Documents/GitHub/pwla_sigmoid/hdl {/home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv}
+vlog -sv -work work +incdir+/home/danielgaio/Documents/GitHub/plan_sigmoid/hdl {/home/danielgaio/Documents/GitHub/plan_sigmoid/hdl/plan_sigmoid.sv}
 

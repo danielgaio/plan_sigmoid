@@ -6,20 +6,20 @@
 # vmap work rtl_work
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Copying /home/daniel/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Copying /home/danielgaio/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+/home/daniel/Documents/GitHub/plan_sigmoid/hdl {/home/daniel/Documents/GitHub/plan_sigmoid/hdl/pwla_sigmoid.sv}
+# vlog -sv -work work +incdir+/home/danielgaio/Documents/GitHub/plan_sigmoid/hdl {/home/danielgaio/Documents/GitHub/plan_sigmoid/hdl/plan_sigmoid.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 10:12:58 on Aug 01,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/daniel/Documents/GitHub/plan_sigmoid/hdl" /home/daniel/Documents/GitHub/plan_sigmoid/hdl/pwla_sigmoid.sv 
-# -- Compiling module pwla_sigmoid
+# Start time: 22:15:44 on Oct 06,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/danielgaio/Documents/GitHub/plan_sigmoid/hdl" /home/danielgaio/Documents/GitHub/plan_sigmoid/hdl/plan_sigmoid.sv 
+# -- Compiling module plan_sigmoid
 # 
 # Top level modules:
-# 	pwla_sigmoid
-# End time: 10:12:58 on Aug 01,2021, Elapsed time: 0:00:00
+# 	plan_sigmoid
+# End time: 22:15:44 on Oct 06,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # 
 # stdin: <EOF>
-# Loading project pwla_simulation
+# Loading project plan_simulation

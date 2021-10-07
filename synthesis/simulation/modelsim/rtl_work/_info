@@ -8,30 +8,30 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 d/home/daniel/Documents/GitHub/plan_sigmoid/synthesis/simulation/modelsim
-vpwla_sigmoid
+Z0 d/home/danielgaio/Documents/GitHub/plan_sigmoid/synthesis/simulation/modelsim
+vplan_sigmoid
 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-!s110 1627823578
+!s110 1633569344
 !i10b 1
-!s100 ECZU^We]Y=jF;ef6SEP9K0
+!s100 GDinddi0A>@PoYB?EcNY`3
 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I9P^>?g^Goa[TVDYj0Yh3b2
+IMz[k0MnM^??:mzKQbz=VV3
 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1627823462
-8/home/daniel/Documents/GitHub/plan_sigmoid/hdl/pwla_sigmoid.sv
-F/home/daniel/Documents/GitHub/plan_sigmoid/hdl/pwla_sigmoid.sv
+w1630765613
+8/home/danielgaio/Documents/GitHub/plan_sigmoid/hdl/plan_sigmoid.sv
+F/home/danielgaio/Documents/GitHub/plan_sigmoid/hdl/plan_sigmoid.sv
 !i122 0
 L0 5 35
 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1627823578.000000
-!s107 /home/daniel/Documents/GitHub/plan_sigmoid/hdl/pwla_sigmoid.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/daniel/Documents/GitHub/plan_sigmoid/hdl|/home/daniel/Documents/GitHub/plan_sigmoid/hdl/pwla_sigmoid.sv|
+!s108 1633569344.000000
+!s107 /home/danielgaio/Documents/GitHub/plan_sigmoid/hdl/plan_sigmoid.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/danielgaio/Documents/GitHub/plan_sigmoid/hdl|/home/danielgaio/Documents/GitHub/plan_sigmoid/hdl/plan_sigmoid.sv|
 !i113 1
 o-sv -work work
-!s92 -sv -work work +incdir+/home/daniel/Documents/GitHub/plan_sigmoid/hdl
+!s92 -sv -work work +incdir+/home/danielgaio/Documents/GitHub/plan_sigmoid/hdl
 tCvgOpt 0

@@ -1,15 +1,15 @@
-/home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv {1 {vlog -work work -sv -stats=none /home/daniel/Documents/GitHub/pwla_sigmoid/hdl/pwla_sigmoid.sv
+/home/danielgaio/Documents/GitHub/plan_sigmoid/testbenches/plan_sigmoid_tb.sv {0 {vlog -work work -sv -stats=none /home/danielgaio/Documents/GitHub/plan_sigmoid/testbenches/plan_sigmoid_tb.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module pwla_sigmoid
+-- Compiling module plan_sigmoid_tb
+** Error: /home/danielgaio/Documents/GitHub/plan_sigmoid/testbenches/plan_sigmoid_tb.sv(121): (vlog-2730) Undefined variable: 'media'.
+** Error: (vlog-13069) /home/danielgaio/Documents/GitHub/plan_sigmoid/testbenches/plan_sigmoid_tb.sv(122): near "for": syntax error, unexpected for, expecting ';'.
+** Error: (vlog-13069) /home/danielgaio/Documents/GitHub/plan_sigmoid/testbenches/plan_sigmoid_tb.sv(122): near ")": syntax error, unexpected ')', expecting ';'.
+
+} {4.0 7.0} {}} /home/danielgaio/Documents/GitHub/plan_sigmoid/hdl/plan_sigmoid.sv {1 {vlog -work work -sv -stats=none /home/danielgaio/Documents/GitHub/plan_sigmoid/hdl/plan_sigmoid.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module plan_sigmoid
 
 Top level modules:
-	pwla_sigmoid
-
-} {} {}} /home/daniel/Documents/GitHub/pwla_sigmoid/testbenches/pwla_sigmoid_tb.sv {1 {vlog -work work -sv -stats=none /home/daniel/Documents/GitHub/pwla_sigmoid/testbenches/pwla_sigmoid_tb.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module pwla_sigmoid_tb
-
-Top level modules:
-	pwla_sigmoid_tb
+	plan_sigmoid
 
 } {} {}}

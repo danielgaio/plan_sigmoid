@@ -1,7 +1,7 @@
-Fitter Status : Successful - Wed Mar 17 13:48:10 2021
+Fitter Status : Successful - Wed Oct  6 22:15:22 2021
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : pwla_sigmoid
-Top-level Entity Name : pwla_sigmoid
+Top-level Entity Name : plan_sigmoid
 Family : Cyclone IV E
 Device : EP4CE6E22C6
 Timing Models : Final
