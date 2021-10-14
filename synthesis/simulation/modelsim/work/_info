@@ -11,7 +11,7 @@ cModel Technology
 d/home/daniel/Documents/GitHub/pwla_sigmoid/synthesis/simulation/modelsim
 vplan_sigmoid
 Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z1 !s110 1633573896
+Z1 !s110 1633656408
 !i10b 1
 !s100 GDinddi0A>@PoYB?EcNY`3
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -22,18 +22,18 @@ Z4 d/home/danielgaio/Documents/GitHub/plan_sigmoid/synthesis/simulation/modelsim
 w1630765613
 8/home/danielgaio/Documents/GitHub/plan_sigmoid/hdl/plan_sigmoid.sv
 F/home/danielgaio/Documents/GitHub/plan_sigmoid/hdl/plan_sigmoid.sv
-!i122 253
+!i122 257
 L0 5 35
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1633573896.000000
+!s108 1633656407.000000
 !s107 /home/danielgaio/Documents/GitHub/plan_sigmoid/hdl/plan_sigmoid.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/danielgaio/Documents/GitHub/plan_sigmoid/hdl/plan_sigmoid.sv|
 !i113 1
-Z7 o-work work -sv
-Z8 tCvgOpt 0
+Z6 o-work work -sv
+Z7 tCvgOpt 0
 vplan_sigmoid_tb
 R0
 R1
@@ -47,15 +47,15 @@ R4
 w1633573885
 8/home/danielgaio/Documents/GitHub/plan_sigmoid/testbenches/plan_sigmoid_tb.sv
 F/home/danielgaio/Documents/GitHub/plan_sigmoid/testbenches/plan_sigmoid_tb.sv
-!i122 254
+!i122 258
 L0 5 149
 R5
 r1
 !s85 0
 31
-R6
+!s108 1633656408.000000
 !s107 /home/danielgaio/Documents/GitHub/plan_sigmoid/testbenches/plan_sigmoid_tb.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/danielgaio/Documents/GitHub/plan_sigmoid/testbenches/plan_sigmoid_tb.sv|
 !i113 1
+R6
 R7
-R8
